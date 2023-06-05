@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    
+    #urls-container {
+      margin-top: 20px;
+      text-align: left;
+    }
+    
+    .tab {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 20px;
+      border: 2px solid;
+      margin: 10px;
+    }
+    
+    .tab a {
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function generateTabs() {
+      var urlsContainer = document.getElementById("urls-container");
+      var urls = "";
+      for (let i = 1; i <= 30; i++) {
+        urls += "<div class='tab'><a href='https://www.bing.com/search?pglt=41&q=" + i + "&cvid=74ce85a08c7a4e8f8e18c6d29cdc1309&aqs=edge.0.69i59l3j69i61j69i60l2j69i65l3.6324j0j1&FORM=ANSPA1&PC=U531' target='_blank'>Tab " + i + "</a></div>";
+      }
+      urlsContainer.innerHTML = urls;
+    }
+  </script>
+</head>
+<body>
+  <h1>Open Tabs</h1>
+  <button onclick="generateTabs()">Generate Tabs</button>
+  <div id="urls-container"></div>
+</body>
+</html>
