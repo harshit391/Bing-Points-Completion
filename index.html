@@ -18,17 +18,23 @@
     }
   </style>
   <script>
-    function openTab(url) {
-      window.open(url, "_blank");
+    const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo (Congo-Brazzaville)","Costa Rica","Croatia","Cuba","Cyprus","Czechia (Czech Republic)","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt"];
+
+    function openWebpage() {
+      window.open('https://www.bing.com/search?q=' + countries[counter] + '&qs=n&form=QBRE&sp=-1&lq=0&pq=wor&sc=11-3&sk=&cvid=80462EC0AD9B44BD88522AD5EA68D923&ghsh=0&ghacc=0&ghpl=');
     }
 
-    function generateButtons() {
-      for (let i=1; i<=5; i++) {
-        setTimeout(function() {
-          window.open('https://translate.google.com/', '_blank');
-        }, 3000); // 3000 milliseconds = 3 seconds
-      };
-    }
+    const numberOfOpens = 40;
+    let counter = 0;
+    const intervalID = setInterval(function() {
+      openWebpage();
+      counter++;
+              
+      if (counter === numberOfOpens) {
+        clearInterval(intervalID);
+      }
+    }, 5000);
+
   </script>
 </head>
 <body>
