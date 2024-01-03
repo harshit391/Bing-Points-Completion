@@ -19,9 +19,9 @@
     const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo (Congo-Brazzaville)","Costa Rica","Croatia","Cuba","Cyprus","Czechia (Czech Republic)","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt"];
 
     function openWebpage() {
-      const iframe = document.getElementById('embeddedFrame');
+      // const iframe = document.getElementById('embeddedFrame');
       // Replace 'https://www.example.com' with the URL of the webpage you want to display
-      iframe.src = 'https://www.bing.com/search?q=' + countries[counter] + '&qs=n&form=QBRE&sp=-1&lq=0&pq=wor&sc=11-3&sk=&cvid=80462EC0AD9B44BD88522AD5EA68D923&ghsh=0&ghacc=0&ghpl=?mobile=true';
+      window.open('https://www.bing.com/search?q=' + countries[counter] + '&qs=n&form=QBRE&sp=-1&lq=0&pq=wor&sc=11-3&sk=&cvid=80462EC0AD9B44BD88522AD5EA68D923&ghsh=0&ghacc=0&ghpl=');
     }
 
     const numberOfOpens = 20;
@@ -40,7 +40,7 @@
 <body>
   <h1>Microsoft Bing Points Hack</h1>
 
-  <iframe id="embeddedFrame" width="360" height="640" title="Embedded Webpage"></iframe>
+  <!-- <iframe id="embeddedFrame" width="360" height="640" title="Embedded Webpage"></iframe> -->
 
 
 </body>
